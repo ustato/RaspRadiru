@@ -6,4 +6,5 @@ NHKのネットラジオらじる★らじるの番組を自動再生してく�
 cd stream
 git submodule init
 git submodule update
+chmod +x *.sh
 ```
