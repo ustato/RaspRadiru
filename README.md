@@ -1,6 +1,7 @@
 # RaspRadiru
 NHKのネットラジオらじる★らじるの番組を自動再生してくれる
 
+<del/.>
 # 最初に実行
 ```
 cd stream
@@ -18,3 +19,4 @@ stream/nhk_stream.sh r1
 ```
 pkill -f rtmpdump
 ```
+</del>
