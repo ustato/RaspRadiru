@@ -7,12 +7,12 @@ Raspberry piを使ってNHKラジオ英会話を楽しく学べるシステム
 
 以下の順に実行する．
 
-##### [extract_sentence.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/extract_sentence.py)
+- [extract_sentence.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/extract_sentence.py)
 ラジオ英会話の公式ページから例文を自動ダウンロードしてsentence.txtを作成する．
 
 テキスト形式に例文を加工できる．
 
-##### [make_test.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/make_test.py)
+- [make_test.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/make_test.py)
 ラジオ英会話の例文から問題をPowerPoint形式で作成する．
 
 
