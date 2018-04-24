@@ -5,6 +5,8 @@ Raspberry piを使ってNHKラジオ英会話を楽しく学べるシステム
 ### ラジオ英会話問題自動作成
 復習のために，ラジオ英会話の一週間の問題を自動作成してくれるツール．
 
+以下の順に実行する．
+
 ##### [extract_sentence.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/extract_sentence.py)
 ラジオ英会話の公式ページから例文を自動ダウンロードしてsentence.txtを作成する．
 
