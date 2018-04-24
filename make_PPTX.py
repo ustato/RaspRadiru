@@ -1,11 +1,23 @@
 # -*- coding: utf-8 -*-
 
 from pptx import Presentation
+import datetime
 
 
 def make_testPPTX(test,lines) :
-    # 初期化
+    # 日付取得
+    main_title = "ラジオ英会話問題"
+    today = datetime.date.today()
+
+    # 初期化とスタートページ作成
     prs = Presentation()
+    title_slide_layout = prs.slide_layouts[0]
+    slide = prs.slides.add_slide(title_slide_layout)
+    title = slide.shapes.title
+    subtitle = slide.placeholders[1]
+    title.text = main_title
+    subtitle.text = str(today)
+
 
     # 問題と正解を作るためにリストを変形
     test=list(test)
