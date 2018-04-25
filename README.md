@@ -21,8 +21,11 @@ python make_test.py
 
 ラジオ英会話の例文から問題をPowerPoint形式で作成する． 
 
-### サンプル
+
+### Sample
+
 [test.pptx](https://www.slideshare.net/AtsutoInage/test-94869665)
+
 
 # らじる★らじる自動再生
 NHKのネットラジオらじる★らじるの番組を自動再生するためのプラクティス
