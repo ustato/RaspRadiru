@@ -22,7 +22,7 @@ python make_test.py
 ラジオ英会話の例文から問題をPowerPoint形式で作成する． 
 
 
-### [Sample](https://www.slideshare.net/AtsutoInage/test-94869665)
+### [Sample](https://www.slideshare.net/AtsutoInage/testpptx-96687066)
 
 
 # らじる★らじる自動再生
