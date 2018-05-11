@@ -11,16 +11,22 @@ words = ['<span lang="en" class="font-en">','<dd class="jp">','<div class="info_
 lines = ld.readlines()
 ld.close()
 
+# 先週分の問題を出す
+count = 0
+
 sentence = ""
 for line in lines:
         for word in words:
                 if line.find(word) >= 0:
-                        if word == words[0]:
-                                sentence+=re.findall('<a .+">(.+)</span></a>',line[:-1])[0]+'\n'
-                        elif word == words[1]:
-                                sentence+=re.findall('<dd .+">(.+)</dd>',line[:-1])[0]+'\n'
-                        elif word == words[2]:
-                                sentence+=re.findall('<div .+">(.+)</div>',line[:-1])[0]+'\n'
+                        if count >= 4*3 :
+                            if word == words[0]:
+                                    sentence+=re.findall('<a .+">(.+)</span></a>',line[:-1])[0]+'\n'
+                            elif word == words[1]:
+                                    sentence+=re.findall('<dd .+">(.+)</dd>',line[:-1])[0]+'\n'
+                            elif word == words[2]:
+                                    sentence+=re.findall('<div .+">(.+)</div>',line[:-1])[0]+'\n'
+                        else :
+                            count+=1
 
 with open("sentence.txt", "w") as f:
     f.write(sentence)
