@@ -19,7 +19,7 @@ python make_test.py
 
 ### [make_test.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/make_test.py)
 
-ラジオ英会話の例文から問題をPowerPoint形式で作成する． 
+ラジオ英会話の例文から問題をPowerPoint形式で作成する．
 
 
 ### [Sample](https://www.slideshare.net/AtsutoInage/testpptx-96687066)
@@ -62,3 +62,10 @@ ffmpeg -i https://nhkradiobkr1-i.akamaihd.net/hls/live/512291/1-r1/1-r1-01.m3u8 
 ```
 ffmpeg -i https://nhkradioakr2-i.akamaihd.net/hls/live/511929/1-r2/1-r2-01.m3u8 -t 900 -movflags faststart -c copy -bsf:a aac_adtstoasc radio_english_r2.m4a
 ```
+
+# Slack上にファイルアップロード
+[upload_slack.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/upload_slack.py)
+とCronを使って自動投稿させれば非常に便利．
+
+# 参考サイト
+[Python を使って Slack に投稿](http://nuxx.noob.jp/python-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6-slack-%E3%81%AB%E6%8A%95%E7%A8%BF/)
