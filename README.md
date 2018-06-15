@@ -67,5 +67,19 @@ ffmpeg -i https://nhkradioakr2-i.akamaihd.net/hls/live/511929/1-r2/1-r2-01.m3u8 
 [upload_slack.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/upload_slack.py)
 とCronを使って自動投稿させれば非常に便利．
 
+たとえば，上記のダウンロードファイルで毎日あげるなら，
+
+```
+crontab -e
+```
+
+でCronを開き，
+```
+5 7 * * 1-5 ffmpeg -i https://nhkradioakr2-i.akamaihd.net/hls/live/511929/1-r2/1-r2-01.m3u8 -t 900 -movflags faststart -c copy -bsf:a aac_adtstoasc radio_english_r2.m4a
+5 7 * * 1-5 python slackupload.py radio_english_r2.m4a
+```
+
+とすれば毎週月〜金までアップロードされる
+
 # 参考サイト
 [Python を使って Slack に投稿](http://nuxx.noob.jp/python-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6-slack-%E3%81%AB%E6%8A%95%E7%A8%BF/)
