@@ -4,7 +4,7 @@ import requests
 import json
 from datetime import datetime
 
-yaml_dict = yaml.load(open('/root/scripts/slack.yaml').read())
+yaml_dict = yaml.load(open('/root/scripts/slack.yaml'), Loader=yaml.SafeLoader)
 token = yaml_dict['slack_selftoken']
 c_name = yaml_dict['slack_channel']
 url = "https://slack.com/api/channels.list?token=" + token
