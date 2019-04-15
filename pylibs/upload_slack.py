@@ -8,7 +8,7 @@ date = str(datetime.date.today())
 
 # API token
 # SlackのAPIトークンを'tokens.yaml'から参照する
-yaml_dict = yaml.load(open('slack.yaml').read())
+yaml_dict = yaml.load(open('/root/scripts/slack.yaml').read())
 token = yaml_dict['slack_token']
 
 # 投稿するチャンネル名
