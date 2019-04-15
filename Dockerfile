@@ -16,13 +16,15 @@ ENV TZ=Asia/Tokyo
 
 # スクリプト保存ディレクトリ
 RUN mkdir /root/scripts
-ADD upload_slack.py /root/scripts/upload_slack.py
+ADD pylibs/upload_slack.py /root/scripts/upload_slack.py
+ADD settings/requirements.txt /root/scripts/requirements.txt
+RUN pip install -r /root/scripts/requirements.txt
 
 # 音声の自動録音保存フォルダ
 RUN mkdir /root/databank
 
 # crontabファイルをコピー
-COPY crontab /var/spool/cron/crontabs/root
+COPY settings/crontab /var/spool/cron/crontabs/root
 
 # cronを起動
 # busybox crond -f -L /dev/stderr
