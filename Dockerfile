@@ -16,7 +16,10 @@ ENV TZ=Asia/Tokyo
 
 # スクリプト保存ディレクトリ
 RUN mkdir /root/scripts
+
+# 各種スクリプトと設定ファイルを追加
 ADD pylibs/upload_slack.py /root/scripts/upload_slack.py
+ADD settings/slack.yaml /root/scripts/slack.yaml
 ADD settings/requirements.txt /root/scripts/requirements.txt
 RUN pip install -r /root/scripts/requirements.txt
 
