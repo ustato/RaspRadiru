@@ -1,17 +1,20 @@
 # -*- coding: utf-8 -*-
 import sys
-from slacker import Slacker
+import yaml
 import datetime
+from slacker import Slacker
 
 date = str(datetime.date.today())
 
 # API token
-# SlackのAPIトークンを入力する
-token = 'xxxx-xxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx'
-# 投稿するチャンネル名
-c_name = 'channel'
+# SlackのAPIトークンを'tokens.yaml'から参照する
+yaml_dict = yaml.load(open('slack.yaml').read())
+token = yaml_dict['slack_token']
 
-# 投稿する画像ファイルへのパス(パラメタから取得)
+# 投稿するチャンネル名
+c_name = yaml_dict['slack_channel']
+
+# 投稿するファイルへのパス(パラメタから取得)
 f_path = sys.argv[1]
 
 # 投稿
