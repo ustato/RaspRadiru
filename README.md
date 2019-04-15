@@ -11,13 +11,13 @@ python extract_sentence.py
 python make_test.py
 ```
 
-### [extract_sentence.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/extract_sentence.py)
+### [extract_sentence.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/pylibs/extract_sentence.py)
 
 ラジオ英会話の公式ページから例文を自動ダウンロードして```sentence.txt```を作成する．
 
 テキスト形式に例文を加工できる．
 
-### [make_test.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/make_test.py)
+### [make_test.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/pylibs/make_test.py)
 
 ラジオ英会話の例文から問題をPowerPoint形式で作成する．
 
@@ -64,7 +64,7 @@ ffmpeg -i https://nhkradioakr2-i.akamaihd.net/hls/live/511929/1-r2/1-r2-01.m3u8 
 ```
 
 # Slack上にファイルアップロード
-[upload_slack.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/upload_slack.py)
+[upload_slack.py](https://github.com/Atsuto0519/RaspRadiru/blob/master/pylibs/upload_slack.py)
 とCronを使って自動投稿させれば非常に便利．
 
 たとえば，上記のダウンロードファイルで毎日あげるなら，
