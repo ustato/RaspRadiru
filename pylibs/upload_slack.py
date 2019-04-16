@@ -7,9 +7,9 @@ from slacker import Slacker
 date = str(datetime.date.today())
 
 # API token
-# SlackのAPIトークンを'tokens.yaml'から参照する
+# SlackのAPIトークンを'slack.yaml'から参照する
 yaml_dict = yaml.load(open('/root/scripts/slack.yaml'), Loader=yaml.SafeLoader)
-token = yaml_dict['slack_token']
+token = yaml_dict['slack_bottoken']
 
 # 投稿するチャンネル名
 c_name = yaml_dict['slack_channel']
