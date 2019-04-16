@@ -19,8 +19,8 @@ RUN mkdir /root/scripts
 
 # 各種スクリプトと設定ファイルを追加
 ADD pylibs/upload_slack.py /root/scripts/upload_slack.py
-ADD pylibs/delete_recentlyfile_in_slack.py \
-    /root/scripts/delete_recentlyfile_in_slack.py
+ADD pylibs/delete_recentlypost_in_slack.py \
+    /root/scripts/delete_recentlypost_in_slack.py
 ADD settings/slack.yaml /root/scripts/slack.yaml
 ADD settings/requirements.txt /root/scripts/requirements.txt
 RUN pip install -r /root/scripts/requirements.txt
