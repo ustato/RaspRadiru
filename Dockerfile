@@ -19,8 +19,8 @@ RUN mkdir /root/scripts
 
 # 各種スクリプトと設定ファイルを追加
 ADD pylibs/upload_slack.py /root/scripts/upload_slack.py
-ADD pylibs/delete_recentlypost_in_slack.py \
-    /root/scripts/delete_recentlypost_in_slack.py
+ADD pylibs/delete_recentlyfile_in_slack.py \
+    /root/scripts/delete_recentlyfile_in_slack.py
 ADD settings/slack.yaml /root/scripts/slack.yaml
 ADD settings/requirements.txt /root/scripts/requirements.txt
 RUN pip install -r /root/scripts/requirements.txt
@@ -28,9 +28,8 @@ RUN pip install -r /root/scripts/requirements.txt
 # 音声の自動録音保存フォルダ
 RUN mkdir /root/databank
 
-# cron設定ファイルを設定
-ADD settings/cron.conf /root/cron.conf
-RUN crontab /root/cron.conf
+# crontabファイルをコピー
+COPY settings/crontab /var/spool/cron/crontabs/root
 
 # cronを起動
 # busybox crond -f -L /dev/stderr
