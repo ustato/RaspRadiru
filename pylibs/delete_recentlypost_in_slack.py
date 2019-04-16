@@ -33,9 +33,8 @@ for attr in entries:
                     if message['user'] == user_info['id']]
         entries2 = sorted( entries2 , key=lambda x:x['ts'] )
         attr2 = entries2.pop()
-        url2 = "https://slack.com/api/chat.delete?token=" + token + "&channel=" + attr['id'] + "&ts=" + attr2['ts']
-        headers2 = {"content-type": "application/json"}
-        r2 = requests.get(url2 ,headers=headers2)
-        json_data2 = r2.json()
+        url = "https://slack.com/api/chat.delete?token=" + token + "&channel=" + attr['id'] + "&ts=" + attr2['ts']
+        r = requests.get(url ,headers=headers)
+        json_data = r.json()
     except KeyError:
         print("No chat.")
