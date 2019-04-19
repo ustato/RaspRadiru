@@ -1,6 +1,20 @@
 # RaspRadiru
 Raspberry piを使ってNHKラジオ英会話を楽しく学べるシステム
 
+## Docker Usage
+
+リポジトリに詰め込んだモジュールと設定がbuildできる．
+オプションでバックグラウンドで毎日録音してくれる．
+
+録音設定等は[crontab](https://github.com/Atsuto0519/RaspRadiru/blob/master/settings/crontab)
+に書き込んでおけば自動にcronに反映される．
+
+`image_name, container_name`は適宜変更．
+
+```
+docker build -t image_name .
+docker run -itd --name container_name image_name
+```
 
 ## ラジオ英会話問題自動作成
 復習のために，ラジオ英会話の一週間の問題を自動作成してくれるツール．
